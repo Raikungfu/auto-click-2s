@@ -113,10 +113,11 @@ function startAutoClickVote(maxClicks, delayBetweenClicks, breakDuration) {
                     console.log('Radio button or vote button not found');
                 }
                 console.log("background");
-            }catch(e){
-                console.log(e);
-            }
             
+            } catch (error) {
+                console.error('Error detected, reloading page...', error);
+                location.reload();
+            }
         }
 
         browserApi.storage.local.get('intervalId', (data) => {
