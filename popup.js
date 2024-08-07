@@ -35,7 +35,7 @@ browserApi.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                 browserApi.scripting.executeScript({
                     target: { tabId: tabId },
                     function: startAutoClickVote,
-                    args: [5, 2500, 60000]
+                    args: [5, 1200, 60000]
                 });
             }
         });
@@ -43,11 +43,13 @@ browserApi.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 });
 
 document.getElementById('start-auto-click').addEventListener('click', () => {
+    browserApi.storage.local.set({ clickCount: 0 });
+    browserApi.storage.local.set({ totalClickCount: 0 });
     browserApi.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         browserApi.scripting.executeScript({
             target: { tabId: tabs[0].id },
             function: startAutoClickVote,
-            args: [5, 2500, 60000]
+            args: [5, 1200, 60000]
         });
     });
 

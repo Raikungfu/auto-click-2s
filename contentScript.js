@@ -102,7 +102,7 @@ function startAutoClickVote(maxClicks, delayBetweenClicks, breakDuration) {
                             console.error('Error while waiting for captcha submission:', error);
                         });
                     }
-                }, 2000);
+                }, 1800);
 
                 clickCount++;
                 browserApi.storage.local.set({ clickCount });
