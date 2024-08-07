@@ -16,6 +16,7 @@ function startAutoClickVote(maxClicks, delayBetweenClicks, breakDuration) {
         function autoClick() {
             try{
                 if (clickCount >= maxClicks) {
+                    console.log("Waiting for 1 minutes");
                     browserApi.storage.local.get('intervalId', (data) => {
                         if (data.intervalId) {
                             clearInterval(data.intervalId);
