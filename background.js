@@ -42,7 +42,7 @@ function startAutoClickVote(maxClicks, delayBetweenClicks, breakDuration) {
                     voteButton.click();
 
                     const checkInterval = 100;
-                    let maxAttempts = isFirstRun ? 18 : 8;
+                    let maxAttempts = isFirstRun ? 38 : 18;
                     isFirstRun = false;
                     let attempts = 0;
 
@@ -82,7 +82,7 @@ function startAutoClickVote(maxClicks, delayBetweenClicks, breakDuration) {
                                         setTimeout(() => {
                                             observer.disconnect();
                                             resolve();
-                                        }, 800);
+                                        }, 1800);
                                     }).then(() => {
                                         console.log('Captcha submitted, reloading page...');
                                         location.reload();
@@ -117,7 +117,7 @@ function startAutoClickVote(maxClicks, delayBetweenClicks, breakDuration) {
                                     setTimeout(() => {
                                         observer.disconnect();
                                         resolve();
-                                    }, 800);
+                                    }, 1800);
                                 }).then(() => {
                                     console.log('Captcha submitted, reloading page...');
                                     location.reload();

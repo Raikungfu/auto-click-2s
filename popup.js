@@ -35,7 +35,7 @@ browserApi.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
                 browserApi.scripting.executeScript({
                     target: { tabId: tabId },
                     function: startAutoClickVote,
-                    args: [5, 1000, 60000]
+                    args: [5, 2000, 60000]
                 });
             }
         });
@@ -49,7 +49,7 @@ document.getElementById('start-auto-click').addEventListener('click', () => {
         browserApi.scripting.executeScript({
             target: { tabId: tabs[0].id },
             function: startAutoClickVote,
-            args: [5, 1000, 60000]
+            args: [5, 2000, 60000]
         });
     });
 
