@@ -14,7 +14,7 @@ function startAutoClickVote(maxClicks, delayBetweenClicks, breakDuration) {
 
         function autoClick() {
             try {
-                if (clickCount >= maxClicks || captchaMissCount > 5) {
+                if (clickCount >= maxClicks || captchaMissCount > 3) {
                     console.log("Waiting for 1 minute");
                     console.log("Total vote: " + totalClickCount);
                     browserApi.storage.local.get('intervalId', (data2) => {
