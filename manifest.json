@@ -6,7 +6,10 @@
   "permissions": [
     "scripting",
     "activeTab",
-    "storage"
+    "storage",
+    "webRequest",
+    "tabs",
+    "webNavigation"
   ],
   "background": {
     "service_worker": "background.js"
@@ -26,8 +29,9 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://poll.fm/14165530/embed"],
-      "js": ["contentScript.js"]
+      "matches": ["https://poll.fm/14276245/embed"],
+      "js": ["contentScript.js"],
+      "run_at": "document_start"
     }
   ]
 }
