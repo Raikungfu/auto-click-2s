@@ -4,17 +4,6 @@ function getBrowserApi() {
 
 const browserApi = getBrowserApi();
 
-// background.js
-browserApi.webRequest.onCompleted.addListener(
-  function (details) {
-    // Kiểm tra URL và mã phản hồi để xác định nếu có alert
-    if (details.url.includes("vote-js.php") && details.statusCode === 200) {
-      chrome.tabs.sendMessage(details.tabId, { type: "checkAlert" });
-    }
-  },
-  { urls: ["<all_urls>"] }
-);
-
 document.addEventListener("DOMContentLoaded", () => {
   browserApi.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     browserApi.scripting.executeScript(
