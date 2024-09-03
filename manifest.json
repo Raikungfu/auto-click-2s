@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Auto Click Vote Extension",
+  "name": "Auto Click 2s Vote Extension",
   "version": "1.0",
   "description": "Vote for FayeYoko.",
   "permissions": [
