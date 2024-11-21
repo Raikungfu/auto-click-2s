@@ -36,7 +36,7 @@ browserApi.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   if (
     changeInfo.status === "complete" &&
     tab.url &&
-    tab.url.includes("https://poll.fm/14276245/embed")
+    tab.url.includes("https://poll.fm/14670398/embed")
   ) {
     browserApi.storage.local.get("autoClickRunning", (data) => {
       if (data.autoClickRunning) {

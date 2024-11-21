@@ -37,9 +37,9 @@ function startAutoClickVote(maxClicks, delayBetweenClicks, breakDuration) {
           }
 
           const radioButton = document.querySelector(
-            'input[type="radio"][value="63529358"]'
+            'input[type="radio"][value="65167446"]'
           );
-          const voteButton = document.getElementById("pd-vote-button14276245");
+          const voteButton = document.getElementById("pd-vote-button14670398");
 
           if (radioButton && voteButton) {
             radioButton.click();
@@ -67,7 +67,7 @@ function startAutoClickVote(maxClicks, delayBetweenClicks, breakDuration) {
                 if (answerInput) {
                   answerInput.value = result;
                   const submitButton = document.getElementById(
-                    "pd-vote-button14276245"
+                    "pd-vote-button14670398"
                   );
                   if (submitButton) {
                     ++totalClickCount;
